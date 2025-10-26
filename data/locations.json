@@ -1,0 +1,938 @@
+[
+  {
+    "userId": "cesar",
+    "lat": -12.042670857676967,
+    "lon": -77.04032170658806,
+    "ts": 1761422902466,
+    "acc": null,
+    "provider": null
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145916,
+    "lon": -76.8703348,
+    "ts": 1761450677382,
+    "acc": 17.593,
+    "provider": "fused"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145916,
+    "lon": -76.8703348,
+    "ts": 1761450677376,
+    "acc": 17.593,
+    "provider": "fused"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145916,
+    "lon": -76.8703348,
+    "ts": 1761450677289,
+    "acc": 17.593,
+    "provider": "fused"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145981,
+    "lon": -76.8703428,
+    "ts": 1761450679697,
+    "acc": 14.762,
+    "provider": "fused"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.043308377825683,
+    "lon": -77.04305129626384,
+    "ts": 1761451232566,
+    "acc": null,
+    "provider": null
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.046970094395677,
+    "lon": -77.04370167369646,
+    "ts": 1761451307487,
+    "acc": null,
+    "provider": null
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145914,
+    "lon": -76.8703467,
+    "acc": 14.031,
+    "provider": "fused",
+    "timestamp": "2025-10-26T05:40:35.613Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145538,
+    "lon": -76.8703336,
+    "acc": 18.054,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:17:27.287Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146006,
+    "lon": -76.8703481,
+    "acc": 15.504,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:17:40.842Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0143607,
+    "lon": -76.8703397,
+    "acc": 11.97,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:36:48.868Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0144944,
+    "lon": -76.8703256,
+    "acc": 25.116,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:37:18.039Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145601,
+    "lon": -76.8703256,
+    "acc": 36.306,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:37:33.388Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146083,
+    "lon": -76.8703435,
+    "acc": 15.552,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:37:43.025Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:56:54.228Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146019,
+    "lon": -76.8703378,
+    "acc": 15.336,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:57:14.208Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:57:39.065Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146016,
+    "lon": -76.8703281,
+    "acc": 16.422,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:58:08.863Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:58:33.978Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146002,
+    "lon": -76.8703301,
+    "acc": 16.398,
+    "provider": "fused",
+    "timestamp": "2025-10-26T15:58:43.972Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:04:03.261Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145892,
+    "lon": -76.8703281,
+    "acc": 16.189,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:04:23.344Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:04:48.224Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146292,
+    "lon": -76.8703386,
+    "acc": 17.465,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:04:58.121Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145824,
+    "lon": -76.8703347,
+    "acc": 218.669,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:05:28.125Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:06:03.074Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145831,
+    "lon": -76.8703317,
+    "acc": 16.929,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:06:32.876Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:07:22.734Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145639,
+    "lon": -76.8703188,
+    "acc": 17.959,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:07:32.373Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:08:36.266Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014589,
+    "lon": -76.8703383,
+    "acc": 15.476,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:08:56.132Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:10:20.847Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146133,
+    "lon": -76.870337,
+    "acc": 16.062,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:10:30.126Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:11:10.056Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146116,
+    "lon": -76.8703477,
+    "acc": 14.608,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:11:30.029Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:13:02.702Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145692,
+    "lon": -76.8703262,
+    "acc": 16.558,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:13:22.378Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:17:58.345Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145934,
+    "lon": -76.8703364,
+    "acc": 14.985,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:18:28.354Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:20:30.920Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146074,
+    "lon": -76.8703495,
+    "acc": 13.682,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:20:50.597Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.050935027954875,
+    "lon": -77.04406024477383,
+    "acc": null,
+    "provider": "unknown",
+    "timestamp": "2025-10-26T16:27:48.484Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:31:59.054Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145846,
+    "lon": -76.8703365,
+    "acc": 17.421,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:32:08.884Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:32:33.972Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145985,
+    "lon": -76.8703407,
+    "acc": 16.031,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:32:43.908Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:35:13.305Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145843,
+    "lon": -76.8703332,
+    "acc": 18.358,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:35:33.072Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:36:50.486Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014595,
+    "lon": -76.8703279,
+    "acc": 16.29,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:37:10.355Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:38:34.937Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014596,
+    "lon": -76.8703382,
+    "acc": 14.46,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:38:44.460Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:39:09.549Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146059,
+    "lon": -76.8703431,
+    "acc": 13.958,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:39:29.204Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:40:34.564Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146134,
+    "lon": -76.8703463,
+    "acc": 16.6,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:40:44.112Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:41:09.030Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145962,
+    "lon": -76.8703444,
+    "acc": 13.094,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:41:29.015Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146568,
+    "lon": -76.8703212,
+    "acc": 29.11,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:42:48.562Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146075,
+    "lon": -76.8703354,
+    "acc": 17.647,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:43:03.427Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:43:28.581Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145916,
+    "lon": -76.8703329,
+    "acc": 16.236,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:43:38.453Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:44:03.736Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146141,
+    "lon": -76.8703432,
+    "acc": 15.831,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:44:13.575Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:44:38.719Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146017,
+    "lon": -76.8703408,
+    "acc": 16.426,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:44:48.600Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:45:13.677Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146128,
+    "lon": -76.8703505,
+    "acc": 14.775,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:45:43.486Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:46:08.588Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146005,
+    "lon": -76.8703533,
+    "acc": 16.135,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:46:18.406Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:48:46.885Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146031,
+    "lon": -76.870348,
+    "acc": 13.495,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:48:56.304Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:49:22.286Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145993,
+    "lon": -76.8703473,
+    "acc": 15.214,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:49:40.853Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:50:05.836Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145872,
+    "lon": -76.8703509,
+    "acc": 14.483,
+    "provider": "fused",
+    "timestamp": "2025-10-26T16:50:25.810Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:00:33.618Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146062,
+    "lon": -76.8703527,
+    "acc": 15.298,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:00:43.372Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:01:46.929Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146069,
+    "lon": -76.8703499,
+    "acc": 13.596,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:01:57.099Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146017,
+    "lon": -76.8703469,
+    "acc": 14.9,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:06:45.779Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:10:50.927Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145918,
+    "lon": -76.8703436,
+    "acc": 14.657,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:11:10.679Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0113839,
+    "lon": -76.8715555,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:15:57.628Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146035,
+    "lon": -76.8703482,
+    "acc": 15.759,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:16:17.748Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146098,
+    "lon": -76.8703505,
+    "acc": 15.864,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:18:14.508Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145825,
+    "lon": -76.8703492,
+    "acc": 13.144,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:19:12.910Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0102503,
+    "lon": -76.8697539,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:20:38.115Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0143004,
+    "lon": -76.8702878,
+    "acc": 12.528,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:20:52.728Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0102503,
+    "lon": -76.8697539,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:21:12.595Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0142998,
+    "lon": -76.8702975,
+    "acc": 13.993,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:21:26.403Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145294,
+    "lon": -76.8703449,
+    "acc": 15.508,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:21:46.092Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014586,
+    "lon": -76.8703484,
+    "acc": 16.277,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:22:05.848Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014616,
+    "lon": -76.8703318,
+    "acc": 18.061,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:22:25.814Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146282,
+    "lon": -76.8703263,
+    "acc": 16.425,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:42:33.738Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145979,
+    "lon": -76.8703362,
+    "acc": 15.341,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:42:52.054Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:43:27.092Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014612,
+    "lon": -76.870342,
+    "acc": 14.731,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:43:42.040Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145825,
+    "lon": -76.8703331,
+    "acc": 17.843,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:46:50.499Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146114,
+    "lon": -76.8703286,
+    "acc": 15.802,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:48:24.891Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145781,
+    "lon": -76.8703312,
+    "acc": 17.304,
+    "provider": "fused",
+    "timestamp": "2025-10-26T17:59:46.777Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146109,
+    "lon": -76.8703263,
+    "acc": 17.881,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:05:10.608Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014586,
+    "lon": -76.8703489,
+    "acc": 15.062,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:06:24.886Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146078,
+    "lon": -76.870324,
+    "acc": 15.834,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:11:45.210Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145794,
+    "lon": -76.8703393,
+    "acc": 17.323,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:12:21.858Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146044,
+    "lon": -76.8703251,
+    "acc": 15.992,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:13:39.988Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145876,
+    "lon": -76.8703482,
+    "acc": 13.785,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:14:38.762Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0127641,
+    "lon": -76.8711952,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:15:37.644Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145992,
+    "lon": -76.870328,
+    "acc": 16.491,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:15:51.228Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0127641,
+    "lon": -76.8711952,
+    "acc": 200,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:19:37.385Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0117332,
+    "lon": -76.8715555,
+    "acc": 300,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:19:52.520Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146171,
+    "lon": -76.8703306,
+    "acc": 17.438,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:20:06.416Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145865,
+    "lon": -76.8703395,
+    "acc": 16.659,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:21:04.214Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0146142,
+    "lon": -76.870331,
+    "acc": 15.696,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:21:23.760Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145774,
+    "lon": -76.8703508,
+    "acc": 16.106,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:22:41.293Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.014606,
+    "lon": -76.8703579,
+    "acc": 14.973,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:27:13.465Z"
+  },
+  {
+    "userId": "cesar",
+    "lat": -12.0145906,
+    "lon": -76.8703298,
+    "acc": 17.14,
+    "provider": "fused",
+    "timestamp": "2025-10-26T18:27:32.383Z"
+  }
+]

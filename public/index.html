@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>GPS Consent Tracker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <style>
+    html, body { height:100%; margin:0; font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif }
+    header{background:#111;color:#fff;padding:10px 14px}
+    .container{padding:12px 16px}
+    #map{height:70vh; min-height:300px; background:#f4f4f4}
+    input,button,select{padding:8px;font-size:14px;margin-right:6px}
+    #log{white-space:pre-wrap;background:#222;color:#0f0;padding:8px;border-radius:6px;margin-top:10px;max-height:30vh;overflow:auto}
+  </style>
+</head>
+<body>
+  <header><strong>GPS Consent Tracker</strong></header>
+  <div class="container">
+    <div>
+      <label for="userId">userId:</label>
+      <input id="userId" value="cesar"/>
+      <select id="mode">
+        <option value="latest">Último punto</option>
+        <option value="history">Historial</option>
+      </select>
+      <button id="loadBtn">Cargar</button> <button id="mockBtn">Simular punto</button>
+      <script>
+             document.getElementById('mockBtn').onclick = async () => {
+    		const id = document.getElementById('userId').value.trim() || 'cesar'
+    		const body = { userId:id, lat:-12.0464 + (Math.random()-0.5)*0.01, lon:-77.0428 + (Math.random()-0.5)*0.01, ts: Date.now() }
+    		const r = await fetch('/api/location', {
+      			method:'POST',
+      			headers:{
+        		'Content-Type':'application/json',
+       			'Authorization':'Bearer dev_token'
+     				 },
+     			 body: JSON.stringify(body)
+    			})
+    			if(!r.ok){ alert('POST fallo: ' + r.status); return }
+   			 document.getElementById('mode').value='latest'
+    				document.getElementById('loadBtn').click()
+ 				 }
+			</script>
+      <span id="status">Listo</span>
+    </div>
+    <div id="map"></div>
+    <div id="log" hidden></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const logEl = document.getElementById('log');
+    function log(msg){ logEl.hidden=false; logEl.textContent += msg + '\n' }
+    window.addEventListener('error', e => log('JS Error: ' + e.message));
+
+    let map;
+    try {
+      map = L.map('map').setView([-12.0464,-77.0428], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        maxZoom: 19,
+        attribution:'&copy; OpenStreetMap'
+      }).addTo(map);
+    } catch (e) { log('Error creando mapa: ' + e.message); }
+
+    const statusEl = document.getElementById('status');
+    const btn = document.getElementById('loadBtn');
+
+    async function api(path){
+      const url = path + (path.includes('?') ? '&' : '?') + '_=' + Date.now();
+      const r = await fetch(url);
+      if(!r.ok){ throw new Error('HTTP ' + r.status) }
+      return r.json();
+    }
+
+    async function loadLatest(id){
+      const d = await api(`/api/latest?userId=${encodeURIComponent(id)}`);
+      if (!d.latest){ statusEl.textContent='Sin datos'; return }
+      const {lat, lon, ts} = d.latest;
+      const m = L.marker([lat,lon]).addTo(map);
+      m.bindPopup(`Último punto<br>${new Date(ts).toLocaleString()}`);
+      map.setView([lat,lon], 15);
+      statusEl.textContent = 'OK';
+    }
+
+    async function loadHistory(id){
+      const d = await api(`/api/locations?userId=${encodeURIComponent(id)}`);
+      const items = d.items||[];
+      if(items.length===0){ statusEl.textContent='Sin datos'; return }
+      const latlngs = items.map(i=>[i.lat,i.lon]);
+      const poly = L.polyline(latlngs).addTo(map);
+      L.marker(latlngs.at(-1)).addTo(map);
+      map.fitBounds(poly.getBounds());
+      statusEl.textContent = `Historial (${items.length})`;
+    }
+
+    btn.addEventListener('click', async () => {
+      try {
+        statusEl.textContent = 'Cargando...';
+        const id = document.getElementById('userId').value.trim();
+        const mode = document.getElementById('mode').value;
+        if(!id){ statusEl.textContent='Ingresa userId'; return }
+        if(mode==='latest') await loadLatest(id); else await loadHistory(id);
+      } catch (e) {
+        statusEl.textContent='Error';
+        log('Fetch error: ' + e.message);
+      }
+    });
+  </script>
+if (d.latest) {
+  const {lat, lon, ts, acc} = d.latest
+  const m = L.marker([lat,lon]).addTo(map)
+  m.bindPopup(`Último punto<br>${new Date(ts).toLocaleString()}<br>${acc?`±${Math.round(acc)} m`:''}`)
+  if (acc) L.circle([lat,lon], { radius: acc }).addTo(map)
+  map.setView([lat,lon], acc && acc>100 ? 14 : 15)
+}
+
+</body>
+</html>

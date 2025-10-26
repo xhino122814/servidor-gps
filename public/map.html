@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DMD Tracker en Tiempo Real</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background: #000;
+      color: #ffd700;
+      text-align: center;
+      padding: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      position: relative;
+    }
+
+    #map {
+      flex: 1;
+      width: 100%;
+    }
+
+    .status {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.75);
+      color: #ffd700;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 1000;
+      transition: opacity 0.5s ease;
+    }
+
+    .status.updated {
+      opacity: 0.4;
+    }
+
+    .controls {
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      z-index: 1001;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .controls button {
+      background: #ffd700;
+      border: none;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .controls button:hover {
+      background: #000;
+      color: #ffd700;
+    }
+
+    .controls button.active {
+      background: #000;
+      color: #ffd700;
+      border: 1px solid #ffd700;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 8px;
+      font-size: 12px;
+      color: #555;
+      background: #fff;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>🛰️ Rastreo GPS en Tiempo Real - DMD Tracker</header>
+
+  <div id="map"></div>
+
+  <div class="status" id="status">⏳ Esperando primera ubicación...</div>
+
+  <div class="controls">
+    <button id="toggleRoute">🟡 Mostrar trayectoria</button>
+  </div>
+
+  <div class="footer">Desarrollado por DMD Cost-Finance Consulting SAC</div>
+
+  <script>
+    const userId = "cesar";
+    const refreshInterval = 5000;
+    let map, marker, circle, lastLat, lastLon, polyline, showRoute;
+    const routePoints = [];
+
+    // 🔹 Recuperar preferencia guardada
+    showRoute = localStorage.getItem("showRoute") === "true";
+
+    map = L.map('map').setView([-12.0464, -77.0428], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const statusEl = document.getElementById("status");
+    const toggleRouteBtn = document.getElementById("toggleRoute");
+
+    // 🔹 Estado inicial del botón según preferencia guardada
+    toggleRouteBtn.classList.toggle("active", showRoute);
+    toggleRouteBtn.textContent = showRoute ? "🔕 Ocultar trayectoria" : "🟡 Mostrar trayectoria";
+
+    toggleRouteBtn.addEventListener("click", () => {
+      showRoute = !showRoute;
+      localStorage.setItem("showRoute", showRoute); // Guardar preferencia
+      toggleRouteBtn.classList.toggle("active", showRoute);
+      toggleRouteBtn.textContent = showRoute ? "🔕 Ocultar trayectoria" : "🟡 Mostrar trayectoria";
+      if (!showRoute && polyline) {
+        map.removeLayer(polyline);
+        polyline = null;
+      }
+    });
+
+    async function fetchLocation() {
+      try {
+        const res = await fetch(`/api/latest?userId=${userId}`);
+        const data = await res.json();
+
+        if (!data.latest) {
+          statusEl.innerText = "⚠️ No hay datos GPS disponibles";
+          return;
+        }
+
+        const { lat, lon, acc, timestamp, provider } = data.latest;
+        const coords = [lat, lon];
+        const time = new Date(timestamp).toLocaleTimeString();
+
+        // --- Si es la primera vez ---
+        if (!marker) {
+          marker = L.marker(coords).addTo(map);
+          circle = L.circle(coords, {
+            radius: acc || 20,
+            color: "#ffd700",
+            fillColor: "#ffd700",
+            fillOpacity: 0.2
+          }).addTo(map);
+          map.setView(coords, 17);
+          marker.bindPopup(`<b>${userId}</b><br>📅 ${time}<br>🎯 ${acc} m<br>🛰️ ${provider || 'fused'}`);
+        } else {
+          const moved = Math.abs(lat - lastLat) > 0.00005 || Math.abs(lon - lastLon) > 0.00005;
+
+          marker.setLatLng(coords);
+          circle.setLatLng(coords);
+          circle.setRadius(acc || 20);
+
+          if (moved) {
+            marker.bindPopup(`<b>${userId}</b><br>📅 ${time}<br>🎯 ${acc} m<br>🛰️ ${provider || 'fused'}`);
+            map.panTo(coords, { animate: true, duration: 0.5 });
+          }
+        }
+
+        lastLat = lat;
+        lastLon = lon;
+
+        // Actualizar estado
+        statusEl.innerText = `✅ Última actualización: ${time}`;
+        statusEl.classList.add("updated");
+        setTimeout(() => statusEl.classList.remove("updated"), 1000);
+
+        // --- Trayectoria opcional ---
+        if (showRoute) {
+          routePoints.push(coords);
+          if (polyline) map.removeLayer(polyline);
+          polyline = L.polyline(routePoints, { color: "#ffd700", weight: 3, opacity: 0.8 }).addTo(map);
+        }
+
+      } catch (err) {
+        statusEl.innerText = "❌ Error de conexión con el servidor";
+        console.error("fetchLocation error:", err);
+      }
+    }
+
+    fetchLocation();
+    setInterval(fetchLocation, refreshInterval);
+  </script>
+</body>
+</html>
